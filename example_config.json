@@ -1,0 +1,9 @@
+{
+  "channels": {
+    "telegram": {
+      "token": "${TELEGRAM_TOKEN}",
+      "chat_id": "${TELEGRAM_CHAT_ID}" 
+    }
+  },
+  "providers": {}
+}
