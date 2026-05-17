@@ -11,7 +11,10 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-import tiktoken
+try:
+    import tiktoken
+except ImportError:  # pragma: no cover
+    tiktoken = None  # type: ignore
 from loguru import logger
 
 

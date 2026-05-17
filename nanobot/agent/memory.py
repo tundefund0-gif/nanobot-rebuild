@@ -12,7 +12,10 @@ from datetime import datetime
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Callable, Iterator
 
-import tiktoken
+try:
+    import tiktoken
+except ImportError:  # pragma: no cover
+    tiktoken = None  # type: ignore
 from loguru import logger
 
 from nanobot.agent.runner import AgentRunner, AgentRunSpec
